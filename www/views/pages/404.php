@@ -1,4 +1,4 @@
-<section>
-  <h1>404 Not Found</h1>
-  <p>It looks like this page does not exist</p>
-</section>
+<main class="not-found">
+  <h1>404</h1>
+  <p>Здається сторінки не існує. <a href="/">Повернутись на головну</a>.</p>
+</main>

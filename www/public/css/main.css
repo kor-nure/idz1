@@ -1,0 +1,240 @@
+:root {
+  --color-prim: #f1f0ed;
+  --color-sec: #333334;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: var(--color-prim);
+}
+
+aside {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  min-width: 300px;
+  width: auto;
+  height: 100%;
+  overflow: hidden auto;
+}
+main {
+  width: 100%;
+  padding: 15px 15px 30px;
+  padding-left: 65px;
+}
+main a {
+  font-weight: 700;
+  color: #000;
+  transition: opacity 0.3s ease;
+}
+main a:hover {
+  opacity: 0.7;
+}
+
+.form {
+  max-width: 600px;
+  width: 100%;
+}
+.form-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.form-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form input,
+.form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.4);
+}
+.form textarea {
+  resize: none;
+  min-height: 150px;
+}
+.form button {
+  background: #000;
+  color: var(--color-prim);
+  border: none;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  transition: opacity 0.3s ease;
+}
+.form button:hover {
+  opacity: 0.7;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+  padding-left: 15px;
+  text-align: center;
+}
+.not-found h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.header {
+  padding-left: 65px;
+  background: var(--color-sec);
+  color: #fff;
+}
+.header-logo {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: inherit;
+  padding: 15px 0;
+}
+
+.sidebar {
+  background: var(--color-sec);
+  color: #fff;
+  transform: translateX(-250px);
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+.sidebar._open {
+  transform: translateX(0);
+  pointer-events: all;
+}
+.sidebar-button {
+  background: none;
+  border: none;
+  fill: #000;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 12px;
+  right: 0;
+  pointer-events: all;
+}
+.sidebar-button svg {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background: var(--color-prim);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.sidebar._open .sidebar-button svg {
+  transform: scaleX(-1);
+}
+.sidebar-logo {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: inherit;
+  text-align: center;
+  padding: 15px;
+  margin: 15px 0;
+}
+.sidebar-nav {
+  display: block;
+  margin-bottom: 30px;
+}
+.menu-item:not(:last-child) {
+  border-bottom: 2px solid transparent;
+}
+.menu-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: 18px;
+  background: #000;
+  padding: 15px;
+  font-weight: 700;
+  transition:
+    padding-left 0.3s ease,
+    color 0.3s ease;
+}
+.menu-item.current-menu-item a {
+  transition: none;
+  pointer-events: none;
+}
+.menu-item.current-menu-item a,
+.menu-item a:hover {
+  padding-left: 25px;
+  color: var(--color-prim);
+}
+
+.main-title {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+.main-message {
+  margin: 15px 0;
+  padding: 10px;
+  background: #fff;
+  display: block;
+  width: 100%;
+  border-left: 5px solid currentColor;
+  color: green;
+}
+.main-message.error {
+  color: red;
+}
+
+.home-files__list {
+  margin: -5px;
+  padding-left: 1.25em !important;
+  font-weight: 700;
+}
+.home-files__item {
+  list-style: decimal !important;
+}
+.home-files__item a {
+  display: block;
+  text-decoration: underline;
+  padding: 5px;
+  color: #000;
+  font-size: 20px;
+  line-height: 1.2;
+  transition: opacity 0.3s ease;
+}
+.home-files__item a:hover {
+  opacity: 0.7;
+}
+
+.file-nav {
+  margin-bottom: 15px;
+}
+.file-nav a,
+.file-nav button {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  font-weight: 700;
+  color: #000;
+  transition: opacity 0.3s ease;
+}
+.file-nav a:hover,
+.file-nav button:hover {
+  opacity: 0.7;
+}
+.file-nav__form {
+  display: inline-block;
+}

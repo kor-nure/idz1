@@ -1,7 +1,5 @@
-<header>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-    </ul>
-  </nav>
+<header class="header">
+  <a href="/" class="header-logo">
+    <span>Бібліотека</span>
+  </a>
 </header>
